@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Wrapper = styled(Flex)`
   margin: 0 auto !important;
-  width: 900px;
+  width: 1000px;
   flex-direction: column;
   justify-content: center;
 `;
@@ -14,9 +14,9 @@ const Wrapper = styled(Flex)`
 const App = () => {
   return (
     <Wrapper>
-      <Flex flexDirection={"column"} justifyContent={"center"}>
+      <Flex flexDirection={"column"} justifyContent={"center"} mb={"10px"}>
         <Text as={"span"} textAlign={"center"}>
-          Canvas Rectangle
+          Football American Field with Canvas API
         </Text>
       </Flex>
       <Canvas />
