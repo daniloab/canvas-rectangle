@@ -10,6 +10,28 @@ const Canvas = (props: any) => {
     ctx.fill();
   };
 
+  const textNumberTop = (ctx: CanvasRenderingContext2D) => {
+    ctx.font = "40px Arial";
+    ctx.scale(-1, -1);
+    ctx.fillText("-1 0", -186, -99);
+    ctx.fillText("-2 0", -330, -99);
+    ctx.fillText("-3 0", -471, -99);
+    ctx.fillText("-4 0", -613, -99);
+    ctx.fillText("-5 0", -755, -99);
+    ctx.fillText("-1 0", -899, -99);
+
+  };
+
+  const textNumberBottom = (ctx: CanvasRenderingContext2D) => {
+    ctx.font = "40px Arial";
+    ctx.fillText("-1 0", 105, 450);
+    ctx.fillText("-2 0", 246, 450);
+    ctx.fillText("-3 0", 389, 450);
+    ctx.fillText("-4 0", 531, 450);
+    ctx.fillText("-5 0", 673, 450);
+    ctx.fillText("-1 0", 815, 450);
+  };
+
   const drawUpperLine = (ctx: CanvasRenderingContext2D) => {
     ctx.fillStyle = "white";
 
@@ -75,6 +97,8 @@ const Canvas = (props: any) => {
   const draw = (ctx: CanvasRenderingContext2D) => {
     drawBackground(ctx);
     drawUpperLine(ctx);
+    textNumberTop(ctx)
+    textNumberBottom(ctx);
     drawBottomLine(ctx);
     drawFiveYardsLines(ctx);
     drawUpperSmallYardsLines(ctx);
